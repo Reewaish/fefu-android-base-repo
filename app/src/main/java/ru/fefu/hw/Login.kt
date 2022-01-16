@@ -1,30 +1,23 @@
 package ru.fefu.hw
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+
 
 class Login : AppCompatActivity(R.layout.login) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val button1 = findViewById<Button>(R.id.login_btn)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar_login)
 
-
-        button1.setOnClickListener {
-            val intent = Intent(this, NavigateActivity::class.java)
-            startActivity(intent)
-
-        }
-        val backButton = findViewById<ImageView>(R.id.ArrowBack)
-        backButton.setOnClickListener {
+        toolbar.setNavigationOnClickListener {
+            val intent = Intent(this, Welcome::class.java)
             finish()
         }
+
     }
-
-
-
 }
