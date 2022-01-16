@@ -5,10 +5,14 @@
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Спорт трекер"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HW">
+        <activity
+            android:name=".NavigateActivity"
+            android:exported="true">
+        </activity>
         <activity android:name=".Welcome"
             android:label="Activity"
             android:exported="true">
